@@ -37,8 +37,8 @@
       alert('IE 11 미만 브라우저에서는 정상적으로 동작하지 않습니다.\n다른 브라우저(크롬, 파이어폭스 등)를 이용해주세요.');
     </script>
   <![endif]-->
-<!-- 카카오톡 공유하기 기능 추가 -->
-  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <!-- 카카오톡 링크 공유하기 -->
+  <script src="//developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
 <body>
@@ -95,7 +95,6 @@
       <p class="wait">잠시 기다려주세요...</p>
     </section>
   </section>
-
   <section id="result" class="container">
     <div id="score-box">
       <div class="p title"></div>
@@ -118,8 +117,8 @@
       <!-- <a onclick=javascript:tw() target="_blank" alt="Share on Twitter" title="트위터에 공유하기">
         <span class="tw"></span>
       </a> -->
-      <a id="kakao-link-btn" href="javascript:sendLink()">
-        <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+      <a id="kakao-link-btn" href="javascript:sendLink()" title="카카오톡에 공유하기">
+        
       </a>
       <a onclick=javascript:fb() target="_blank" alt="Share on Facebook" title="페이스북에 공유하기">
         <span class="fb"></span>
@@ -175,62 +174,52 @@
       </a>
     </button>
   </section>
-
   <footer id="footer">
     <div>
       <span class="highlight">Ashley Home Buffet</span>
       © 2021
     </div>
   </footer>
-
 </div>
+<!-- 카카오톡 링크 공유하기 -->
+<script type='text/javascript'>
+//<![CDATA[
+  // // 사용할 앱의 JavaScript 키를 설정해주세요.
+  Kakao.init("fe80e4c0924bac1bac13a933b92cf35c");
+  // // 카카오링크 버튼을 생성합니다. 처음 한 번만 호출하면 됩니다.
 
+  Kakao.Link.createDefaultButton({
+    container: '#kakao-link-btn',
+    objectType: 'feed',
+    content: {
+      title: $('meta[property="og:title"]"').attr('content'),
+      description: $('meta[property="og:description"]').attr('content'),
+      imageUrl: $('meta[property="og:image"]').attr('content'),
+      link:{
+        mobileWebUrl: window.location.href,
+        webUrl: window.location.href
+      }
+    },
+    social: {
+      likeCount: 286,
+      commentCount: 45,
+      sharedCount: 845
+    },
+    buttons: [
+      {
+        title: '웹으로 보기',
+        link: {
+          webUrl: window.location.href
+        }
+      }
+    ]
+  });
+//]]>
+</script>
 <script src="js/darkmode.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
 <script src="js/share.js"></script>
-<!-- 카카오톡 공유하기 기능 js part -->
-<script type='text/javascript'>
-  //<![CDATA[
-    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-    Kakao.init('fe80e4c0924bac1bac13a933b92cf35c');
-    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '뷔페 유형 테스트',
-        description: '#뷔페유형테스트 #애슐리홈뷔페 #애슐리딜리버리',
-        imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        link: {
-          mobileWebUrl: 'https://developers.kakao.com',
-          webUrl: 'https://developers.kakao.com'
-        }
-      },
-      social: {
-        likeCount: 286,
-        commentCount: 45,
-        sharedCount: 845
-      },
-      buttons: [
-        {
-          title: '웹으로 보기',
-          link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com'
-          }
-        }
-        // {
-        //   title: '앱으로 보기',
-        //   link: {
-        //     mobileWebUrl: 'https://developers.kakao.com',
-        //     webUrl: 'https://developers.kakao.com'
-        //   }
-        //}
-      ]
-    });
-</script>
-
 </body>
 
 </html>
