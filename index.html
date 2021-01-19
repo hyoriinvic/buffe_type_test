@@ -38,6 +38,9 @@
     </script>
   <![endif]-->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- Kakao API -->
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script> Kakao.init('fe80e4c0924bac1bac13a933b92cf35c'); </script>
 </head>
 
 <body>
@@ -116,24 +119,7 @@
       <!-- <a onclick=javascript:tw() target="_blank" alt="Share on Twitter" title="트위터에 공유하기">
         <span class="tw"></span>
       </a> -->
-      <!-- Kakao API -->
-      <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-      <script>
-        Kakao.init('fe80e4c0924bac1bac13a933b92cf35c'); //6번 항목에서 발급 받았던 javascript key를 여기에 넣는다.
-
-        $("#btn").click(function(e) { //jquery를 사용한다 가정
-          e.preventDefault();   //이벤트 버블링 prevent
-              
-          Kakao.Link.sendCustom({
-          templateId: 45235,   // 15번 항목에서 확인하였던 이벤트번호 등록 
-          // templeteArgs: {
-          //   'title': '[뷔페유형테스트]나는 뷔페에서 어떤 유형?',
-          //   'description' : '#애슐리홈뷔페 #애슐리딜리버리'
-          // }
-          });
-        });
-      </script>
-      <a id="kakao-link-btn" href="javascript:sendCustom()" alt="Share on KakaoTalk" title="카카오톡에 공유하기">
+      <a onclick=javascript:kakao() target="_blank" alt="Share on KakaoTalk" title="카카오톡에 공유하기">
         <span class="kakao"></span>
       </a>
       <a onclick=javascript:fb() target="_blank" alt="Share on Facebook" title="페이스북에 공유하기">

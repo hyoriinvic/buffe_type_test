@@ -8,21 +8,17 @@ const fb = () => {
     'facebooksharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
   return false;
 }
-// const tw = () => {
-//   let name = document.querySelector('.result').innerHTML;
-//   switch (name) {
-//     case '표범':
-//     case '유니콘':
-//       name += '이에요! ';
-//       break;
-//     default:
-//       name += '예요! ';
-//   }
-//   window.open('https://twitter.com/intent/tweet?text='
-//     + title + '%0A' + '저는 ' + name + '' + hash + '%0A' + url,
-//     'twittersharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');
-//   return false;
-// }
+const kakao = () => {
+    Kakao.Link.sendCustom({
+      templateId: 45235,   // 15번 항목에서 확인하였던 이벤트번호 등록 
+      // templeteArgs: {
+      //   'title': '[뷔페유형테스트]나는 뷔페에서 어떤 유형?',
+      //   'description' : '#애슐리홈뷔페 #애슐리딜리버리'
+      // }
+    });
+  return false;
+}
+
 const nv = () => {
   window.open('http://share.naver.com/web/shareView.nhn?url='
     + url + '&title=' + title,
