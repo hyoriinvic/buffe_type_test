@@ -104,8 +104,8 @@
   background-size: cover;
   cursor: pointer;
 }
-.tw {
-  background-image: url('../img/tw.svg');
+#kakao-link-btn {
+  background-image: url('../img/kakaotalk.png');
   /* 
   자료 출처
   http://www.vectorico.com/twitter-logo-white-on-blue/
