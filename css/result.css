@@ -104,12 +104,8 @@
   background-size: cover;
   cursor: pointer;
 }
-#kakao-link-btn {
+.kakao {
   /* background-image: url('../img/kakaotalk.png'); */
-  /* 
-  자료 출처
-  http://www.vectorico.com/twitter-logo-white-on-blue/
-  */
 }
 .fb {
   background-image: url('../img/fb.svg');
