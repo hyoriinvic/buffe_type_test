@@ -37,8 +37,7 @@
       alert('IE 11 미만 브라우저에서는 정상적으로 동작하지 않습니다.\n다른 브라우저(크롬, 파이어폭스 등)를 이용해주세요.');
     </script>
   <![endif]-->
-  <!-- 카카오톡 링크 공유하기 -->
-  <script src="//developers.kakao.com/sdk/js/kakao.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
@@ -117,8 +116,21 @@
       <!-- <a onclick=javascript:tw() target="_blank" alt="Share on Twitter" title="트위터에 공유하기">
         <span class="tw"></span>
       </a> -->
-      <a id="kakao-link-btn" href="javascript:sendLink()" title="카카오톡에 공유하기">
-        
+      <!-- Kakao API -->
+      <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+      <script>
+      Kakao.init('fe80e4c0924bac1bac13a933b92cf35c'); //6번 항목에서 발급 받았던 javascript key를 여기에 넣는다.
+
+      $("#btn").click(function(e) { //jquery를 사용한다 가정
+      e.preventDefault();   //이벤트 버블링 prevent
+          
+      Kakao.Link.sendCustom({
+      templateId: 45235   // 15번 항목에서 확인하였던 이벤트번호 등록 
+      });
+      });
+      </script>
+      <a id="kakao-link-btn" href="javascript:sendLink()" alt="Share on KakaoTalk" title="카카오톡에 공유하기">
+        <span class="kakao"></span>
       </a>
       <a onclick=javascript:fb() target="_blank" alt="Share on Facebook" title="페이스북에 공유하기">
         <span class="fb"></span>
@@ -181,41 +193,6 @@
     </div>
   </footer>
 </div>
-<!-- 카카오톡 링크 공유하기 -->
-<script type='text/javascript'>
-//<![CDATA[
-  // // 사용할 앱의 JavaScript 키를 설정해주세요.
-  Kakao.init("fe80e4c0924bac1bac13a933b92cf35c");
-  // // 카카오링크 버튼을 생성합니다. 처음 한 번만 호출하면 됩니다.
-
-  Kakao.Link.createDefaultButton({
-    container: '#kakao-link-btn',
-    objectType: 'feed',
-    content: {
-      title: $('meta[property="og:title"]"').attr('content'),
-      description: $('meta[property="og:description"]').attr('content'),
-      imageUrl: $('meta[property="og:image"]').attr('content'),
-      link:{
-        mobileWebUrl: window.location.href,
-        webUrl: window.location.href
-      }
-    },
-    social: {
-      likeCount: 286,
-      commentCount: 45,
-      sharedCount: 845
-    },
-    buttons: [
-      {
-        title: '웹으로 보기',
-        link: {
-          webUrl: window.location.href
-        }
-      }
-    ]
-  });
-//]]>
-</script>
 <script src="js/darkmode.js"></script>
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
