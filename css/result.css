@@ -104,8 +104,8 @@
   background-size: cover;
   cursor: pointer;
 }
-.kakao {
-  /* background-image: url('../img/kakaotalk.png'); */
+#kakao-link-btn {
+  background-image: url('../img/kakaotalk.png');
 }
 .fb {
   background-image: url('../img/fb.svg');
