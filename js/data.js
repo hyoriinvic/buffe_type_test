@@ -65,11 +65,7 @@ const qnaList = [
     a: [
       { answer: 'a. ', score: 6 },
       { answer: 'b. ', score: 7 },
-      { answer: 'c. ', score: 5 },
-      { answer: 'd. ', score: 4 },
-      { answer: 'e. ', score: 3 },
-      { answer: 'f. ', score: 2 },
-      { answer: 'g. ', score: 1 }
+      { answer: 'c. ', score: 5 }
     ]
   },
   {
@@ -77,9 +73,7 @@ const qnaList = [
     a: [
       { answer: 'a. ', score: 7 },
       { answer: 'b. ', score: 6 },
-      { answer: 'c. ', score: 4 },
-      { answer: 'd. ', score: 2 },
-      { answer: 'e. ', score: 1 }
+      { answer: 'c. ', score: 4 }
     ]
   },
   {
@@ -87,10 +81,7 @@ const qnaList = [
     a: [
       { answer: 'a. ', score: 4 },
       { answer: 'b. ', score: 2 },
-      { answer: 'c. ', score: 3 },
-      { answer: 'd. ', score: 5 },
-      { answer: 'e. ', score: 6 },
-      { answer: 'f. ', score: 1 }
+      { answer: 'c. ', score: 3 }
     ]
   }    
 ]
