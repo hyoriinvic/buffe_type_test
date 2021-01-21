@@ -44,46 +44,6 @@ const qnaList = [
       { answer: 'd. 더 먹을까? 말까? 못 정하겠다. 가만히 있기 민망하니 친구따라 나가본다.', score: 5 }
     ]
   }
-  // {
-  //   q: '6. ',
-  //   a: [
-  //     { answer: 'a. ', score: 6 },
-  //     { answer: 'b. ', score: 4 },
-  //     { answer: 'c. ', score: 2 }
-  //   ]
-  // },
-  // {
-  //   q: '7. ',
-  //   a: [
-  //     { answer: 'a. ', score: 6 },
-  //     { answer: 'b. ', score: 2 },
-  //     { answer: 'c. ', score: 4 }
-  //   ]
-  // },
-  // {
-  //   q: '8. ',
-  //   a: [
-  //     { answer: 'a. ', score: 6 },
-  //     { answer: 'b. ', score: 7 },
-  //     { answer: 'c. ', score: 5 }
-  //   ]
-  // },
-  // {
-  //   q: '9. ',
-  //   a: [
-  //     { answer: 'a. ', score: 7 },
-  //     { answer: 'b. ', score: 6 },
-  //     { answer: 'c. ', score: 4 }
-  //   ]
-  // },
-  // {
-  //   q: '10. ',
-  //   a: [
-  //     { answer: 'a. ', score: 4 },
-  //     { answer: 'b. ', score: 2 },
-  //     { answer: 'c. ', score: 3 }
-  //   ]
-  // }    
 ]
 
 const infoList = [
